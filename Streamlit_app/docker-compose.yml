@@ -1,0 +1,33 @@
+#Author: Alberto Moccardi
+# Version: 1.0  
+# Date: 2024-07-08
+# Deep Learning for predictive maintenance course
+version: '3.8'
+
+services:
+  db:
+    image: nouchka/sqlite3
+    container_name: sqlite_db
+    volumes:
+      - ../data:/db  # Mount the data directory to /db inside the container
+
+  backend_app:
+    build:
+      context: ../  # Set the context to the project root
+      dockerfile: Streamlit_app/Dockerfile.backend
+    container_name: backend_app
+    ports:
+      - "8501:8501"
+    volumes:
+      - ../data:/app/data  # Access to users.db if needed
+
+  generate_users_stream:
+    build:
+      context: ../  # Set the context to the project root
+      dockerfile: Streamlit_app/Dockerfile.generator
+    container_name: generate_users_stream
+    volumes:
+      - ../data:/app/data  # Access to users.db if needed
+
+volumes:
+  db_data:

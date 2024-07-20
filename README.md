@@ -3,6 +3,10 @@
 ## Overview
 The Worker Data Segmentation Application is an interactive web application built using Streamlit. It aims to segment worker data into different clusters based on specific features such as age, annual income, and spending score. This segmentation helps in understanding different groups within the data, which can be useful for various analytical and strategic purposes.
 
+
+https://github.com/user-attachments/assets/57df1aba-4163-4a7f-aab0-7faa41b63323
+
+
 ## Features
 - **Upload CSV Data**: Users can upload their worker data in CSV format.
 - **Data Segmentation**: The application segments the uploaded data using a pre-trained clustering model.
@@ -54,10 +58,6 @@ This feature allows the application to continuously update the segmentation resu
 - **User Authentication**: Add user authentication to restrict access to the application.
 - **Custom Segmentation**: Allow users to customize the segmentation criteria and algorithms.
 
-## Author
-**Your Name**
-- [GitHub](https://github.com/yourusername)
-- [Email](mailto:your.email@example.com)
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
